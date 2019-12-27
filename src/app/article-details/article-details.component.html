@@ -1,0 +1,21 @@
+<h2>Article Details</h2> 
+
+<hr/>
+<div *ngIf="article">
+  <div>
+    <label><b>ID: </b></label> {{article.ID}}
+  </div>
+  <div>
+    <label><b>Title: </b></label> {{article.Title}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{article.Description}}
+  </div>  
+  <div>
+    <label><b>Content: </b></label> {{article.Content}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Article List</button><br>
