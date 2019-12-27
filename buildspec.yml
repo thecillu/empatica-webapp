@@ -9,10 +9,9 @@ phases:
   build:
     commands:
       - echo Entered the build phase... 
-      - echo $REPOSITORY_URI
 
       - ng build
   post_build:
     commands:
       - echo Copy files to the destination bucket
-      - aws s3 sync ./dist s3://WEBAPP_BUCKET
+      - aws s3 sync ./dist s3://$WEBAPP_BUCKET
