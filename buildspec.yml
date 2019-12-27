@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Entered the build phase... 
 
-      - ng build
+      - ng build --configuration=production
   post_build:
     commands:
       - echo Copy files to the destination bucket
