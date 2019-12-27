@@ -4,10 +4,13 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
+      - ng update
+      - npm update
   build:
     commands:
       - echo Entered the build phase... 
       - echo $REPOSITORY_URI
+
       - ng build
   post_build:
     commands:
