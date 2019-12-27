@@ -14,4 +14,4 @@ phases:
   post_build:
     commands:
       - echo Copy files to the destination bucket
-      - aws s3 sync ./dist/empatica-webapp s3://$WEBAPP_BUCKET --acl public-read
+      - aws s3 sync --acl public-read --delete ./dist/empatica-webapp s3://$WEBAPP_BUCKET 
