@@ -1,6 +1,6 @@
 export class Article {
-    id: number;
-    title: string;
-    description: string;
-    content: string;
+    ID: number;
+    Title: string;
+    Description: string;
+    Content: string;
 }
