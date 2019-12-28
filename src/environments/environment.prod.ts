@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'http://empatica-load-balancer-1267712256.eu-central-1.elb.amazonaws.com/articles'
+  apiBaseUrl: 'http://empatica-load-balancer-1789365880.eu-central-1.elb.amazonaws.com/articles'
 };
