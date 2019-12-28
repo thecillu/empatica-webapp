@@ -1,27 +1,30 @@
-# EmpaticaWebapp
+# Empatica Webapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+Angular WebApp which manages Articles.
 
-## Development server
+The Demo WebApp consumes the RESTful API exposed from the project [empatica-server](https://github.com/thecillu/empatica-server)
+
+
+## Server Endpoint configuration
+
+The endpoint of the RESTFul API is defined in the files `src/environments/environment*.ts`, with the variable name `apiBaseUrl`.
+
+By default the Dev Server connect to the address `http://localhost:80`. Change it in the file `src/environments/environment.ts`
+
+Please put the correct endpoint in the Production file `src/environments/environment.prod.ts` before to serve or build the WebApp with the Production configuration
+
+## Local Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Make sure to run locally the [empatica-server](https://github.com/thecillu/empatica-server) before to run the Angulat WebApp.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Local Production server
+
+Run `ng serve --configuration=production` for a Local server with the production configuration.  Navigate to `http://localhost:4200/`
+ 
+Make sure to run locally the [empatica-server](https://github.com/thecillu/empatica-server) before to run the Angulat WebApp.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng build --configuration=production` to build the project. The build artifacts will be stored in the `dist/` directory.
