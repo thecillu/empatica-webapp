@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { CreateArticleComponent } from './create-article/create-article.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 import { ArticleListComponent } from './article-list/article-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UpdateArticleComponent } from './update-article/update-article.component';
+import { CacheInterceptor } from './http-interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { UpdateArticleComponent } from './update-article/update-article.componen
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
